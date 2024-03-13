@@ -32,5 +32,5 @@ steps:
           - "--region"
           - "europe-west1"
       dir: "next-app"
-    - options:
-      logging: CLOUD_LOGGING_ONLY
+    options:
+      logging: GCS_ONLY
