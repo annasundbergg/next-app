@@ -10,7 +10,7 @@ steps:
           [
               "build",
               "-t",
-              "europe-west1-docker.pkg.dev/next-app/cloud-run-source-deploy/next-app",
+              "europe-west1-docker.pkg.dev/my-next-app-417014/cloud-run-source-deploy/next-app",
               ".",
           ]
       dir: "next-app"
@@ -18,7 +18,7 @@ steps:
       args:
           [
               "push",
-              "europe-west1-docker.pkg.dev/next-app/cloud-run-source-deploy/next-app",
+              "europe-west1-docker.pkg.dev/my-next-app-417014/cloud-run-source-deploy/next-app",
           ]
       dir: "next-app"
     - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
@@ -28,9 +28,7 @@ steps:
           - "deploy"
           - "next-app"
           - "--image"
-          - "europe-west1-docker.pkg.dev/next-app/cloud-run-source-deploy/next-app"
+          - "europe-west1-docker.pkg.dev/my-next-app-417014/cloud-run-source-deploy/next-app"
           - "--region"
           - "europe-west1"
       dir: "next-app"
-    options:
-      logging: GCS_ONLY
