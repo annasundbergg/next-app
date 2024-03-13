@@ -25,7 +25,7 @@ export default function RemoveBtn({ id }: PostProps) {
         }
     };
     return (
-        <button onClick={removePost} className="text-red-500">
+        <button onClick={removePost} className="text-red-900">
             <HiOutlineTrash size={24} />
         </button>
     );
