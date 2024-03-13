@@ -22,7 +22,10 @@ export default async function PostList() {
     return (
         <>
             {posts.map((p: any) => (
-                <div className="p-4 border order-slate-300 my-3 flex justify-between gap-5 items-start">
+                <div
+                    key={p._id}
+                    className="p-4 border order-slate-300 my-3 flex justify-between gap-5 items-start"
+                >
                     <div>
                         <h2 className="font-bold text-2xl">{p.title}</h2>
                         <div>{p.description}</div>

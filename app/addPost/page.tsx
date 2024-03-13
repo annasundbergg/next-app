@@ -27,6 +27,7 @@ export default function AddPost() {
             });
             if (res.ok) {
                 router.push("/");
+                router.refresh();
             } else {
                 throw new Error("Failed to create topic");
             }
