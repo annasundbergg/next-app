@@ -12,13 +12,16 @@ export default function EditPostForm({ id, title, description }: PostProps) {
     const handleSubmit = async (e: React.SyntheticEvent) => {
         e.preventDefault();
         try {
-            const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
-                method: "PUT",
-                headers: {
-                    "Content-type": "application/json",
-                },
-                body: JSON.stringify({ newTitle, newDescription }),
-            });
+            const res = await fetch(
+                `https://next-app-ra67t2gtja-ew.a.run.app/api/posts/${id}`,
+                {
+                    method: "PUT",
+                    headers: {
+                        "Content-type": "application/json",
+                    },
+                    body: JSON.stringify({ newTitle, newDescription }),
+                }
+            );
 
             if (!res.ok) {
                 throw new Error("Failed to update post");

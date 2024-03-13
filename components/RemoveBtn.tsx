@@ -16,7 +16,7 @@ export default function RemoveBtn({ id }: PostProps) {
         const confirmed = confirm("Are you sure?");
         if (confirmed) {
             const res = await fetch(
-                `http://localhost:3000/api/posts?id=${id}`,
+                `https://next-app-ra67t2gtja-ew.a.run.app/api/posts?id=${id}`,
                 {
                     method: "DELETE",
                 }

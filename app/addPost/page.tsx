@@ -18,13 +18,16 @@ export default function AddPost() {
         }
 
         try {
-            const res = await fetch("http://localhost:3000/api/posts", {
-                method: "POST",
-                headers: {
-                    "Content-type": "application/json",
-                },
-                body: JSON.stringify({ title, description }),
-            });
+            const res = await fetch(
+                "https://next-app-ra67t2gtja-ew.a.run.app/api/posts",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json",
+                    },
+                    body: JSON.stringify({ title, description }),
+                }
+            );
             if (res.ok) {
                 router.push("/");
                 router.refresh();

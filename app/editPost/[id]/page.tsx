@@ -2,9 +2,12 @@ import EditPostForm from "@/components/EditPostForm";
 
 const getPostById = async (id: any) => {
     try {
-        const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
-            cache: "no-store",
-        });
+        const res = await fetch(
+            `https://next-app-ra67t2gtja-ew.a.run.app/api/posts/${id}`,
+            {
+                cache: "no-store",
+            }
+        );
 
         if (!res.ok) {
             throw new Error("Failed to fetch Post");
